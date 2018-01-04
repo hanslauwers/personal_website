@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Project.create([{ title: 'TestProject', description: 'Description of test project',
+                  image_url: 'hans-portrait-100.jpg', link_to_code: 'http://www.google.com',
+                  link_to_site: 'http://aginsurance.be' }])
+Technology.create([{ title: 'TestTechnology', description: 'Description of the technology', skills_level:'5' }])
+
+ProjectTechnology.create([{ project_id: '1', technology_id: '1'}])

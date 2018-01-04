@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h2 align="center">
+  <%= @project.title %>
+</h2>
+<div>
+  Description: <%= @project.description %>
+</div>
+<div>
+  Link to image: <%= @project.image_url %>
+</div>
+<div>
+  Link to code: <%= @project.link_to_code %>
+</div>
+<div>
+  Link to site: <%= @project.link_to_site %>
+</div>
+
+<%= render @project.technologies %>
+
+<%= link_to 'Back', projects_path %>

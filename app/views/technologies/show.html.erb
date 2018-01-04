@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<h2 align="center">
+  <%= @technology.title %>
+</h2>
+<div>
+Description: <%= @technology.description %>
+</div>
+<div>
+Skills level: <%= @technology.skills_level %>
+</div>
+<div>
+Projects: <%= render @technology.projects %>
+</div>
+
+<%= link_to 'Back', technologies_path %>
