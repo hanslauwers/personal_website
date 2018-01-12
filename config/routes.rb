@@ -4,5 +4,5 @@ Rails.application.routes.draw do
 
   root :to => "home#index"
 
-  resources :projects, only: [:show, :index]
+  resources :projects
 end

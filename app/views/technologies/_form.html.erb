@@ -11,7 +11,46 @@
     </div>
   <% end %>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="row">
+    <div class="col-md-12 form-container">
+      <%= form_for(@technology, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+        <div class="form-group row">
+          <div class="col-md-2 control-label form-label-container">
+            <%= f.label :title %>
+          </div>
+          <div class="col-md-8 form-input-container">
+            <%= f.text_field :title, class: "form-control", placeholder: "Title of project", autofocus: true %>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-2 control-label form-label-container">
+            <%= f.label :description %>
+          </div>
+          <div class="col-md-8 form-input-container">
+            <%= f.text_area :description, rows: 10, class: "form-control", placeholder: "Description of project" %>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-2 control-label form-label-container">
+            <%= f.label :skills_level %>
+          </div>
+          <div class="col-md-8 form-input-container">
+            <%= f.text_field :skills_level, class: "form-control", placeholder: "Skills level (1-4)" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-8 offset-md-2">
+              <%= f.collection_check_boxes :project_ids, Project.all, :id, :title do |cb|  %>
+                <% cb.label(class: "checkbox-inline input_checkbox") { cb.check_box(class: "checkbox") + cb.text } %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <div class="actions">
+          <%= form.submit %>
+        </div>
+      <% end %>
+    </div>
   </div>
 <% end %>
