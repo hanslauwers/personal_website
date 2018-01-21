@@ -1,3 +1,16 @@
-<span class="badge badge-pill badge-success">
-  <%= link_to technology.title, technology_path(technology) %>
-</span> &nbsp;
+<div>
+  <h3 class="tech-title">
+    <%= technology.title %>
+  </h3>
+  <div class="tech-description">
+    <%= technology.description %>
+  </div>
+  <div>
+    <% technology.projects.each do |project| %>
+      <div>
+        <div class="tech-projects"><%= link_to project.title, project_path(project) %></div>
+      </div>
+    <% end %>
+  </div>
+  <hl class="tech-line" />
+

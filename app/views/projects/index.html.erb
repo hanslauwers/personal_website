@@ -1,20 +1,19 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Projects</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="projects-list">
     <% @projects.each do |project| %>
-      <tr>
-        <td><%= link_to 'Show', project %></td>
-      </tr>
+      <section>
+        <%= render project %>
+      </section>
     <% end %>
-  </tbody>
-</table>
+</div>
 
+<script>
+  $(".projects-list").tiltedpage_scroll({
+    sectionContainer: "> section",     // In case you don't want to use <section> tag, you can define your won CSS selector here
+    angle: 50,                         // You can define the angle of the tilted section here. Change this to false if you want to disable the tilted effect. The default value is 50 degrees.
+    opacity: true,                     // You can toggle the opacity effect with this option. The default value is true
+    scale: true,                       // You can toggle the scaling effect here as well. The default value is true.
+    outAnimation: true                 // In case you do not want the out animation, you can toggle this to false. The defaul value is true.
+  });
+</script>

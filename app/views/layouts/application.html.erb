@@ -40,28 +40,34 @@
     <![endif]-->
   </head>
   <body>
-
-    <div class="navbar navbar-default sticky-top">
+    <div class="header-container">
       <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <div class="navbar-collapse collapse navbar-responsive-collapse">
-          <ul class="nav navbar-nav">
-            <li><%= link_to "Home", root_path  %></li>
-            <li><%= link_to "Projects", projects_path  %></li>
-            <li><%= link_to "Technologies", technologies_path  %></li>
-            <li><%= link_to "Personal", "#"  %></li>
-          </ul>
-          <ul class="nav navbar-right">
-            <li><%= link_to "Link to full C.V.", "#"  %></li>
-          </ul>
+        <div class="row">
+          <div class="title-header col-lg-12">
+            <h1>Hans Lauwers</h1>
+          </div>
+          <div class="navbar navbar-default navbar-custom sticky-top col-lg-12">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-collapse collapse navbar-responsive-collapse navbar-collapse-custom">
+              <ul class="nav navbar-nav navbar-nav-custom">
+                <li class="navbar-li-custom"><%= link_to "Home", root_path  %></li>
+                <li class="navbar-li-custom"><%= link_to "Technologies", technologies_path  %></li>
+                <li class="navbar-li-custom"><%= link_to "Projects", projects_path  %></li>
+                <li class="navbar-li-custom"><%= link_to "About", "#"  %></li>
+              </ul>
+              <ul class="nav navbar-right navbar-right-custom">
+                <li class="navbar-right-li-custom"><%= link_to "Link to full C.V.", "#"  %></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-
+  </div>
+  <div class="content-container">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -70,11 +76,13 @@
         </div>
       </div><!--/row-->
 
+
       <footer>
         <p>&copy; Hans Lauwers 2017</p>
       </footer>
 
     </div> <!-- /container -->
+  </div>
 
   </body>
 </html>

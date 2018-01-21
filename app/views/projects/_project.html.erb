@@ -1,3 +1,19 @@
-<span class="badge badge-pill">
-  <%= link_to project.title, project_path(project) %>
-</span> &nbsp;
+<h4 align="center">
+  <%= project.title %>
+</h4>
+<div class="project-body" style="background-image:url('assets/<%= project.image_url%>');">
+  <div class="project-content-container">
+    <div class="project-link-to-site">
+      Link to site: <%= link_to "Visit site", project.link_to_site, target: '_blank' %>
+    </div>
+    <div class="project-description">
+      Description: <%= project.description %>
+    </div>
+    <div class="project-link-to-code">
+      Link to code: <%= link_to "Github repository", project.link_to_code, target: '_blank' %>
+    </div>
+    <div class="project-link-to-site">
+      Link to site: <%= project.link_to_site %>
+    </div>
+  </div>
+</div>
