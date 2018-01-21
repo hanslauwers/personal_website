@@ -42,6 +42,23 @@ body{
   }
 }
 
+/* Home Page*/
+.intro-text-container{
+  float: left;
+  width: 60%;
+  padding-right: 5%;
+}
+.wordcloud-container{
+  width: 40%;
+  float: left;
+  .wordcloud{
+    width: 100%;
+    height: 350px;
+    position: relative;
+  }
+}
+
+/* Technologies page */
 /* ChartDiv */
 #chartdiv {
   width: 40%;
