@@ -3,7 +3,7 @@
     <%= technology.title %>
   </h3>
   <div class="tech-description">
-    <%= technology.description %>
+    <%=raw technology.description %>
   </div>
   <div>
     <% technology.projects.each do |project| %>

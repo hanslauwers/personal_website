@@ -7,7 +7,7 @@
       Link to site: <%= link_to "Visit site", project.link_to_site, target: '_blank' %>
     </div>
     <div class="project-description">
-      Description: <%= project.description %>
+      Description: <%=raw project.description %>
     </div>
     <div class="project-link-to-code">
       Link to code: <%= link_to "Github repository", project.link_to_code, target: '_blank' %>

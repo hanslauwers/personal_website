@@ -42,13 +42,13 @@ body{
   }
 }
 
-/* Home Page*/
-.intro-text-container{
+/* Home Page - About Page*/
+.intro-text-container, .keys-container, .about-text-container{
   float: left;
   width: 60%;
   padding-right: 5%;
 }
-.wordcloud-container{
+.wordcloud-container, .contact-block{
   width: 40%;
   float: left;
   .wordcloud{
@@ -61,7 +61,7 @@ body{
 /* Technologies page */
 /* ChartDiv */
 #chartdiv {
-  width: 40%;
+  width: 70%;
   height: 250px;
   margin: auto;
 } 
@@ -74,24 +74,26 @@ a[title^="JavaScript charts"]{
 .projects-list{
   overflow: hidden;
   width: 70%;
+
+  .tps-section, .project-body{
+    height: 400px !important;
+  }
+  .project-body
+  {
+    text-align:center;
+    font-size:0;
+    background-size: contain;
+    align:center;
+  }
+  .project-body:hover{
+    background-image:none !important;
+    background-color: $lightgrey;
+    font-size: 13px;
+  }
+  .project-content-container{
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 10%;
+  }
 }
-.tps-section, .project-body{
-  height: 400px !important;
-}
-.project-body
-{
-  text-align:center;
-  font-size:0;
-  background-size: contain;
-  align:center;
-}
-.project-body:hover{
-  background-image:none !important;
-  background-color: $lightgrey;
-  font-size: 13px;
-}
-.project-content-container{
-  padding-left: 20%;
-  padding-right: 20%;
-  padding-top: 10%;
-}
+

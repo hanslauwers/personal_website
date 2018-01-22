@@ -12,9 +12,10 @@ function generateTechnologyChart(technologies){
         "dataProvider": technologies,
         "valueAxes": [{
             "position": "left",
-            "title": "Level",
-        "minimum": 0,
-        "maximum": 5
+            "title": "",
+            "minimum": 0,
+            "maximum": 5,
+            "labelFunction": formatValue
         }],
         "graphs": [{
             "balloonText": "[[category]]: <b>[[value]]</b>",
@@ -40,4 +41,33 @@ function generateTechnologyChart(technologies){
           "enabled": false
          }
     });
+}
+
+function generateColor(level){
+    if(level <= 1)
+        return "red";
+    else if (level <= 2)
+        return "orange";
+    else if (level <= 3)
+        return "blue";
+    else if (level <= 4)
+        return "green";
+}
+
+function formatValue(value, formattedValue, valueAxis){
+    if(value == 1){
+        return "No practical experience";
+    }
+    else if(value == 2){
+        return "Little practical experience";
+    }
+    else if (value == 3){
+        return "Completely autonomous";
+    }
+    else if (value == 4){
+        return "Expert";
+    }
+    else {
+        return "";
+    }
 }

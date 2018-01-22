@@ -11,8 +11,9 @@
 <%= javascript_tag do %>
   var technologyItemsForChart = [];
   <% @technologies.each do |technology| %>
+      var color = generateColor(<%= technology.skills_level %>);
       technologyItemsForChart.push({"technology" : '<%= technology.title %>',
-         "level" : <%= technology.skills_level %>, "color" : "red"});
+         "level" : <%= technology.skills_level %>, "color" : color});
   <% end %>
 <% end %>
 <script>
