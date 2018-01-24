@@ -1,7 +1,17 @@
-<h1>Projects</h1>
+<h2 align="center">Projects</h2>
+<% if @selected_technology != nil %>
+  <h1> <%= @selected_technology.title %></h1>
+<% end %>
+<div class="technology-filters">
+  <% @technologies.each do |technology| %>
+    <span class="technology-filter">
+      <%= link_to technology.title, "#{projects_path}?technology_filter=#{technology.id}" %></span>
+  <% end %>
+</div>
 
 <div class="projects-list">
     <% @projects.each do |project| %>
+    <a name="project_<%= project.id %>" class="invisible-anchor">anchor text [invisible]</a>
       <section>
         <%= render project %>
       </section>

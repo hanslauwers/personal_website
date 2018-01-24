@@ -1,6 +1,7 @@
 $black: #000000;
 $lightgrey : #D3D3D3;
 
+
 /* Application Page */
 body{
   margin: 0px !important;
@@ -12,13 +13,14 @@ body{
   background: white;
   z-index: 2;
   width: 100%;
+  padding-top: 10px;
 }
 .center
 {
   align: center;
 }
 .content-container{
-  margin-top:140px;
+  margin-top:80px;
 }
 
 
@@ -32,12 +34,26 @@ body{
   border-bottom: 3px solid $black;
   border-radius: 0px;
 
-  li.navbar-li-custom, li.navbar-right-li-custom
-  {
-    font-size: 1.6em;
-    font-weight: bold;
-    a{
-      color: $black;
+ .navbar-nav-custom{
+    width: 100%;
+    li.title-header{
+      font-size: 1.9em;
+      font-weight: bold;
+      padding: 15px;
+      padding-right: 50px;
+      font-family: monospace;
+    }
+    li.navbar-li-custom{
+      font-family: Simplifica;
+      font-size: 2.5em;
+      a{
+        color: $black;
+        padding: 15px;
+      }
+    }
+    li.cv-link{
+      float:right;
+      font-weight: bold;
     }
   }
 }
@@ -47,6 +63,7 @@ body{
   float: left;
   width: 60%;
   padding-right: 5%;
+  font-family: monospace;
 }
 .wordcloud-container, .contact-block{
   width: 40%;
@@ -55,7 +72,14 @@ body{
     width: 100%;
     height: 350px;
     position: relative;
+    font-family: Simplifica;
+    font-size: 1.2em;
   }
+}
+.contact-block{
+    font-family: Simplifica;
+    font-size: 2.5em;
+    line-height: 1.5;
 }
 
 /* Technologies page */
@@ -68,14 +92,66 @@ body{
 
 a[title^="JavaScript charts"]{
   display:none !important;
-} 
+}
+
+.technology-listing{
+  width: 70%;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin: auto;
+  text-align: center;
+  .technology-container{
+    border-bottom: 1px solid $lightgrey;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    .tech-title{
+        font-family: Simplifica;
+        font-size: 2.5em;
+        line-height: 2;
+        font-weight: bold;
+    }
+    .tech-description{
+      font-family: monospace;
+    }
+    .tech-projects{
+      .btn-project{
+        margin-top: 15px;
+        color: #fff;
+        background-color: #3071a9;
+        border-color: #285e8e;
+        font-family: monospace;
+        &:hover{
+          background-color: #428bca
+        }
+      }
+    }
+  }
+}
 
 /* Projects Page */
+.technology-filters
+{
+  padding: 15px;
+  font-family: monospace;
+  width: 70%;
+  margin:auto;
+  text-align:center;
+  .technology-filter{
+    padding: 15px;
+  }
+}
 .projects-list{
   overflow: hidden;
   width: 70%;
+  margin:auto;
 
-  .tps-section, .project-body{
+  .invisible-anchor{
+    position: relative;
+    top: -90px;
+    visibility:hidden;
+  }
+
+  .tps-section{
     height: 400px !important;
   }
   .project-body
@@ -83,7 +159,7 @@ a[title^="JavaScript charts"]{
     text-align:center;
     font-size:0;
     background-size: contain;
-    align:center;
+    height: 381px !important;
   }
   .project-body:hover{
     background-image:none !important;
@@ -94,6 +170,15 @@ a[title^="JavaScript charts"]{
     padding-left: 20%;
     padding-right: 20%;
     padding-top: 10%;
+    height: 100%;
+    font-family: monospace;
   }
+}
+
+/* Footer */
+.footer-container{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-family: monospace;
 }
 

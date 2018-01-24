@@ -5,6 +5,14 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     @projects = Project.all
+    @technologies = Technology.all
+    @selected_technology_id = params[:technology_filter]
+    if(@selected_technology_id != nil)
+      @selected_technology = Technology.find(@selected_technology_id)
+      @projects = @projects.select { |project| project.technologies.include?(@selected_technology) }
+    else
+      @selected_technology = nil;
+    end
   end
 
   # GET /projects/1
@@ -51,5 +59,10 @@ class ProjectsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
       params.require(:project).permit(:title, :description, :image_url, :link_to_code, :link_to_site, technology_ids: [])
+    end
+
+    def filter_on_technology(technology)
+      @projects.where()
+
     end
 end

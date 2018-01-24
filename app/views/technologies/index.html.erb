@@ -24,11 +24,11 @@
   <div id="chartdiv"></div>
 </div>
 
-<% @technologies.each do |technology| %>
-  <div>
-    <div><%= render technology %></div>
-  </div>
-<% end %>
+<div class="technology-listing">
+  <% @technologies.each do |technology| %>
+      <%= render technology %>
+  <% end %>
+</div>
 
 <br>
 

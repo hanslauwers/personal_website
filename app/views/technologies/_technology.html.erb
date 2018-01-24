@@ -1,16 +1,16 @@
-<div>
-  <h3 class="tech-title">
+<div class="technology-container">
+  <div class="tech-title">
     <%= technology.title %>
-  </h3>
+  </div>
   <div class="tech-description">
     <%=raw technology.description %>
   </div>
   <div>
-    <% technology.projects.each do |project| %>
-      <div>
-        <div class="tech-projects"><%= link_to project.title, project_path(project) %></div>
-      </div>
-    <% end %>
+    <div class="tech-projects">
+      <% technology.projects.each do |project| %>
+          <%= link_to project.title, "#{projects_path}#project_#{project.id}", :class => 'btn btn-primary btn-project' %>
+      <% end %>
+    </div>
   </div>
-  <hl class="tech-line" />
+</div>
 

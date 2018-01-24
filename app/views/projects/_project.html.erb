@@ -3,17 +3,11 @@
 </h4>
 <div class="project-body" style="background-image:url('assets/<%= project.image_url%>');">
   <div class="project-content-container">
-    <div class="project-link-to-site">
-      Link to site: <%= link_to "Visit site", project.link_to_site, target: '_blank' %>
-    </div>
     <div class="project-description">
-      Description: <%=raw project.description %>
+      <%=raw project.description %>
     </div>
-    <div class="project-link-to-code">
-      Link to code: <%= link_to "Github repository", project.link_to_code, target: '_blank' %>
-    </div>
-    <div class="project-link-to-site">
-      Link to site: <%= project.link_to_site %>
-    </div>
+    <div>
+      <%= link_to "Visit the site", project.link_to_site, target: '_blank', class: 'project-content-link project-link-to-site' %>
+      <%= link_to "Code on Github", project.link_to_code, target: '_blank', class: 'project-content-link project-link-to-code'  %>
   </div>
 </div>
