@@ -47,11 +47,11 @@ function generateColor(level){
     if(level <= 1)
         return "red";
     else if (level <= 2)
-        return "orange";
+        return "#f7f707";
     else if (level <= 3)
-        return "blue";
+        return "#173eed";
     else if (level <= 4)
-        return "green";
+        return "#17ed17";
 }
 
 function formatValue(value, formattedValue, valueAxis){

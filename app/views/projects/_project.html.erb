@@ -7,7 +7,14 @@
       <%=raw project.description %>
     </div>
     <div>
-      <%= link_to "Visit the site", project.link_to_site, target: '_blank', class: 'project-content-link project-link-to-site' %>
-      <%= link_to "Code on Github", project.link_to_code, target: '_blank', class: 'project-content-link project-link-to-code'  %>
+      <% if project.link_to_site != nil && project.link_to_site != ''%>
+        <%= link_to "Visit the site", project.link_to_site, target: '_blank', class: 'project-content-link project-link-to-site' %>
+      <% end %>
+      <% if project.link_to_code != nil && project.link_to_code != '' %>
+        <%= link_to "Code on Github", project.link_to_code, target: '_blank', class: 'project-content-link projectect-link-to-code'  %>
+      <% end %>
+  </div>
+  <div class="project-more-info">
+      <%= link_to "More info", project_path(project) %>
   </div>
 </div>

@@ -1,11 +1,11 @@
 $black: #000000;
-$lightgrey : #D3D3D3;
+$lightgrey : #ecf0f1;
+$darkgrey: #666;
+$stronggreen: #17ed17;
+$strongblue: #173eed;
 
 
 /* Application Page */
-body{
-  margin: 0px !important;
-}
 .header-container
 {
   position: fixed;
@@ -58,12 +58,16 @@ body{
   }
 }
 
-/* Home Page - About Page*/
+/* Home Page - About Page */
 .intro-text-container, .keys-container, .about-text-container{
   float: left;
   width: 60%;
   padding-right: 5%;
   font-family: monospace;
+}
+.keys-info{
+  line-height: 25px;
+  font-size: 16px;
 }
 .wordcloud-container, .contact-block{
   width: 40%;
@@ -117,11 +121,11 @@ a[title^="JavaScript charts"]{
       .btn-project{
         margin-top: 15px;
         color: #fff;
-        background-color: #3071a9;
+        background-color: $strongblue;
         border-color: #285e8e;
         font-family: monospace;
         &:hover{
-          background-color: #428bca
+          background-color: #3071a9;
         }
       }
     }
