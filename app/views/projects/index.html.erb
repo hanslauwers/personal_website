@@ -18,6 +18,12 @@
     <% end %>
 </div>
 
+<div id="myModal" class="modal">
+  <span class="close" onclick="javascript:closeModal();">&times;</span>
+  <img class="modal-content" id="modal-for-project">
+  <div id="caption"></div>
+</div>
+
 <script>
   $(".projects-list").tiltedpage_scroll({
     sectionContainer: "> section",     // In case you don't want to use <section> tag, you can define your won CSS selector here

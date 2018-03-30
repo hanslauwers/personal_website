@@ -1,18 +1,22 @@
 <h4 align="center">
   <%= project.title %>
 </h4>
-<div class="project-body" style="background-image:url('assets/<%= project.image_url%>');">
-  <div class="project-content-container">
-    <div class="project-description">
-      <%=raw project.description %>
+<div class="project-content-container">
+  <% if project.image_url != nil && project.image_url != '' %>
+    <div class="project-image-container">
+      <img id="project-image-<%= project.id %>" src="assets/<%= project.image_url %>" alt="<%= project.title %>" class= "project-image" onclick="javascript:showModal('project-image-<%= project.id %>');" />
     </div>
-    <div>
-      <% if project.link_to_site != nil && project.link_to_site != ''%>
-        <%= link_to "Visit the site", project.link_to_site, target: '_blank', class: 'project-content-link project-link-to-site' %>
-      <% end %>
-      <% if project.link_to_code != nil && project.link_to_code != '' %>
-        <%= link_to "Code on Github", project.link_to_code, target: '_blank', class: 'project-content-link projectect-link-to-code'  %>
-      <% end %>
+  <% end %>
+  <div class="project-description">
+    <%=raw project.description %>
+  </div>
+  <div>
+    <% if project.link_to_site != nil && project.link_to_site != ''%>
+      <%= link_to "Visit the site", project.link_to_site, target: '_blank', class: 'project-content-link project-link-to-site' %>
+    <% end %>
+    <% if project.link_to_code != nil && project.link_to_code != '' %>
+      <%= link_to "Code on Github", project.link_to_code, target: '_blank', class: 'project-content-link projectect-link-to-code'  %>
+    <% end %>
   </div>
   <div class="project-more-info">
       <%= link_to "More info", project_path(project) %>

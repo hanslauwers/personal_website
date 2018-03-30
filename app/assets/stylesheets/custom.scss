@@ -158,24 +158,25 @@ a[title^="JavaScript charts"]{
   .tps-section{
     height: 400px !important;
   }
-  .project-body
-  {
-    text-align:center;
-    font-size:0;
-    background-size: contain;
-    height: 381px !important;
-  }
-  .project-body:hover{
-    background-image:none !important;
-    background-color: $lightgrey;
-    font-size: 13px;
-  }
+  
   .project-content-container{
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-top: 10%;
+    padding: 30px;
     height: 100%;
     font-family: monospace;
+    background-color: $lightgrey;
+
+    .project-image-container{
+      float: right;
+      margin-left: 30px;
+      margin-bottom: 30px;
+
+      .project-image{
+        height: 150px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+    }
   }
 }
 
