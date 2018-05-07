@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180122191932) do
+ActiveRecord::Schema.define(version: 20180507165747) do
 
   create_table "project_technologies", force: :cascade do |t|
     t.integer "project_id"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20180122191932) do
     t.string "link_to_site"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "period"
+    t.integer "order"
   end
 
   create_table "technologies", force: :cascade do |t|

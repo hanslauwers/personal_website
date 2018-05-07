@@ -208,8 +208,21 @@ a[title^="JavaScript charts"]{
     font-family: monospace;
     background-color: rgba(0,0,0,0.9);
 
+    .project-title-period-container{
+      line-height: 39px;
+
+      .project-title-container{
+        float: left;
+      }
+    }
+
+    .project-technologies{
+      margin-bottom: 20px;
+    }
+
+
     .project-description{
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
     .project-content-link{
       color:black;

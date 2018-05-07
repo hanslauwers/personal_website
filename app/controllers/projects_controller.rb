@@ -71,7 +71,8 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:title, :description, :image_url, :link_to_code, :link_to_site, technology_ids: [])
+      params.require(:project).permit(:title, :description, :image_url, :link_to_code, :link_to_site,
+                                        :period, :order, technology_ids: [])
     end
 
     def filter_on_technology(technology)

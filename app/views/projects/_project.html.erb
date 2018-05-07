@@ -5,11 +5,22 @@
       <img id="project-image-<%= project.id %>" src="assets/<%= project.image_url %>" alt="<%= project.title %>" class= "project-image" onclick="javascript:showModal('project-image-<%= project.id %>');" />
     </div>
   <% end %>
-  <div class="project-description">
-    <h4>
-      <%= project.title %>
-    </h4>
-    <%=raw project.description %>
+  <div class="project-title-description">
+    <div class="project-title-period-container">
+      <span class="project-title-container" >
+        <h4><%= project.title %></h4>
+      </span>
+      <span>&nbsp;(<%= project.period %>)</span>
+    </div>
+    <div class="project-description">
+      <%=raw project.description %>
+    </div>
+  </div>
+  <div class="project-technologies">
+    Technologies:
+     <% project.technologies.each do |technology| %>
+      <a href="<%= projects_path %>?technology_filter=<%= technology.id %>"><span class="technology-filter badge badge-light"><%= technology.title %></span></a>
+    <% end %>
   </div>
   <div class="project-content-links">
     <% if project.link_to_site != nil && project.link_to_site != ''%>
