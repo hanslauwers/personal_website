@@ -1,0 +1,59 @@
+@media only screen and (max-width: 450px) {
+
+  .header-container
+  {
+    position: relative;
+    top: auto;
+    width: 100%;
+  }
+  .content-container{
+    margin-top:0;
+  }
+
+  .navbar-custom
+  {
+    .title-header{
+      width: 80%;
+    }
+    .navbar-nav-custom{
+      li.cv-link{
+        float:none;
+      }
+    }
+  }
+
+  .keys-info{
+    font-size: 14px;
+  }
+  .contact-block{
+    font-size: 2em;
+  }
+
+  .check-out-projects{
+    a{
+      font-size: 23px;
+      
+      &:hover, &:visited{
+        font-size: 23px;
+      }
+    }
+  }
+
+  .projects-list {
+    width: 100%;
+    .tps-section{
+      height: 600px !important;
+    }
+
+    .project-content-container{
+      .project-content-link{
+        margin-right: 0;
+      }
+    }
+  }
+  .project-image{
+    display: none;
+  }
+  
+
+}

@@ -7,10 +7,12 @@
   <% end %>
   <div class="project-title-description">
     <div class="project-title-period-container">
-      <span class="project-title-container" >
+      <div class="project-title-container" >
         <h4><%= project.title %></h4>
-      </span>
-      <span>&nbsp;(<%= project.period %>)</span>
+      </div>
+      <div>
+        <%= project.period %>
+      </div>
     </div>
     <div class="project-description">
       <%=raw project.description %>
