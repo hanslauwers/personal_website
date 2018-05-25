@@ -21,7 +21,7 @@
   <div class="project-technologies">
     Technologies:
      <% project.technologies.each do |technology| %>
-      <a href="<%= projects_path %>?technology_filter=<%= technology.id %>"><span class="technology-filter badge badge-light"><%= technology.title %></span></a>
+      <span class="technology-filter badge badge-light"><%= technology.title %></span>
     <% end %>
   </div>
   <div class="project-content-links">

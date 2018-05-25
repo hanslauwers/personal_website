@@ -39,11 +39,12 @@
     }
   }
 
+  .projects-pane{
+    display:none;
+  }
   .projects-list {
     width: 100%;
-    .tps-section{
-      height: 600px !important;
-    }
+    margin:auto;
 
     .project-content-container{
       .project-content-link{

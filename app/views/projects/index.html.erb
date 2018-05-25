@@ -1,14 +1,24 @@
-<h2 align="center">Projects</h2>
 
-<div class="projects-list">
-    <% @projects.order([:order]).each do |project| %>
-    <a name="project_<%= project.id %>" class="invisible-anchor">anchor text [invisible]</a>
-      <section>
-        <%= render project %>
-      </section>
+
+<div class="projects-pane">
+  <ul class="nav-demo">
+    <% @projects.order(order: :desc).each do |project| %>
+    <li><a href="#project_<%= project.id %>"><%= project.title %></a>
     <% end %>
+  </ul>
 </div>
 
+<div class="projects-list">
+  <h2 align="center">Projects</h2>
+  <% @projects.order(order: :desc).each do |project| %>
+  <!-- <a name="project_<%= project.id %>" class="invisible-anchor">anchor text [invisible]</a> -->
+    <section>
+      <a name="project_<%= project.id %>" class="invisible-anchor-2">anchor text [invisible]</a>
+      <a class="invisible-anchor">anchor text [invisible]</a>
+      <%= render project %>
+    </section>
+  <% end %>
+</div>
 <div id="myModal" class="modal">
   <span class="close" onclick="javascript:closeModal();">&times;</span>
   <img class="modal-content" id="modal-for-project">
@@ -16,11 +26,18 @@
 </div>
 
 <script>
+$(".nav-demo li").spotter({
+  menuListClass: "active",
+  contentList: ".projects-list .invisible-anchor"
+});
+
+</script>
+<!-- <script>
   $(".projects-list").tiltedpage_scroll({
     sectionContainer: "> section",     // In case you don't want to use <section> tag, you can define your won CSS selector here
     angle: 50,                         // You can define the angle of the tilted section here. Change this to false if you want to disable the tilted effect. The default value is 50 degrees.
     opacity: true,                     // You can toggle the opacity effect with this option. The default value is true
     scale: true,                       // You can toggle the scaling effect here as well. The default value is true.
-    outAnimation: true                 // In case you do not want the out animation, you can toggle this to false. The defaul value is true.
+    outAnimation: false                 // In case you do not want the out animation, you can toggle this to false. The defaul value is true.
   });
-</script>
+</script> -->
