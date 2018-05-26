@@ -12,3 +12,6 @@ Projects: <%= render @technology.projects %>
 </div>
 
 <%= link_to 'Back', technologies_path %>
+
+<%= link_to "Delete this technology", technology_path(@technology), method: :delete,
+                    data: {confirm: "Are you sure you want to delete this technology?"}, class: "btn btn-md btn-danger" %>
