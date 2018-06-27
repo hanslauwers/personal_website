@@ -20,7 +20,7 @@
   </div>
   <div class="project-technologies">
     Technologies:
-     <% project.technologies.order(title: :desc).each do |technology| %>
+     <% project.technologies.order(order: :desc).each do |technology| %>
       <span class="technology-filter badge badge-light"><%= technology.title %></span>
     <% end %>
   </div>

@@ -1,35 +1,11 @@
-<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-<script src="https://www.amcharts.com/lib/3/serial.js"></script>
-<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
-<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
-<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
-
 <p id="notice"><%= notice %></p>
 
 <h2 align="center">Technologies</h2>
 
-<%= javascript_tag do %>
-  var technologyItemsForChart = [];
-  <% @technologies.each do |technology| %>
-      var color = generateColor(<%= technology.skills_level %>);
-      technologyItemsForChart.push({"technology" : '<%= technology.title %>',
-         "level" : <%= technology.skills_level %>, "color" : color});
-  <% end %>
-<% end %>
-<script>
-  generateTechnologyChart(technologyItemsForChart);
-</script>
-
-<div class="center">
-  <div id="chartdiv"></div>
-</div>
-
 <div class="technology-listing">
-  <% @technologies.each do |technology| %>
-      <%= render technology %>
-  <% end %>
+  <%= render @technologies.order(order: :desc) %>
 </div>
 
-<br>
+<hr />
 
 <%= link_to 'New Technology', new_technology_path %>
