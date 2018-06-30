@@ -1,22 +1,16 @@
 class ProjectsController < ApplicationController
+  include AuthenticationRedirectConcern
+
+
+  before_action :authenticate_redirection, except: [:index]
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
-  # GET /projects
-  # GET /projects.json
+  layout "pages"
+
   def index
     @projects = Project.all
-    @technologies = Technology.all
-    @selected_technology_id = params[:technology_filter]
-    if(@selected_technology_id != nil)
-      @selected_technology = Technology.find(@selected_technology_id)
-      @projects = @projects.select { |project| project.technologies.include?(@selected_technology) }
-    else
-      @selected_technology = nil;
-    end
   end
 
-  # GET /projects/1
-  # GET /projects/1.json
   def show
   end
 
@@ -27,56 +21,39 @@ class ProjectsController < ApplicationController
     @project = Project.new
   end
 
-  # POST /projects
-  # POST /projects.json
   def create
     @project = Project.new(project_params)
 
     respond_to do |format|
       if @project.save
-        format.html { redirect_to @project, notice: 'Project was successfully created.' }
-        format.json { render :show, status: :created, location: @project }
+        format.html { redirect_to projects_path, notice: 'Project was successfully created.' }
       else
         format.html { render :new }
-        format.json { render json: @project.errors, status: :unprocessable_entity }
       end
     end
   end
 
-  # PATCH/PUT /projects/1
-  # PATCH/PUT /projects/1.json
   def update
     respond_to do |format|
       if @project.update(project_params)
-        format.html { redirect_to @project, notice: 'Project was successfully updated.' }
-        format.json { render :show, status: :ok, location: @project }
+        format.html { redirect_to projects_path, notice: 'Project was successfully updated.' }
       else
         format.html { render :edit }
-        format.json { render json: @project.errors, status: :unprocessable_entity }
       end
     end
   end
 
-  # DELETE /projects/1
-  # DELETE /projects/1.json
   def destroy
     @project.destroy
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_project
       @project = Project.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
       params.require(:project).permit(:title, :description, :image_url, :link_to_code, :link_to_site,
                                         :period, :order, technology_ids: [])
-    end
-
-    def filter_on_technology(technology)
-      @projects.where()
-
     end
 end

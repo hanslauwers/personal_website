@@ -2,7 +2,8 @@
 <div class="project-content-container">
   <% if project.image_url != nil && project.image_url != '' %>
     <div class="project-image-container">
-      <img id="project-image-<%= project.id %>" src="assets/<%= project.image_url %>" alt="<%= project.title %>" class= "project-image" onclick="javascript:showModal('project-image-<%= project.id %>');" />
+      <img id="project-image-<%= project.id %>" src="assets/<%= project.image_url %>" alt="<%= project.title %>"
+            class= "project-image" onclick="javascript:showModal('project-image-<%= project.id %>');" />
     </div>
   <% end %>
   <div class="project-title-description">
@@ -29,7 +30,7 @@
       <%= link_to "Visit the site", project.link_to_site, target: '_blank', class: 'project-content-link project-link-to-site' %>
     <% end %>
     <% if project.link_to_code != nil && project.link_to_code != '' %>
-      <%= link_to "Code on Github", project.link_to_code, target: '_blank', class: 'project-content-link projectect-link-to-code'  %>
+      <%= link_to "Code on Github", project.link_to_code, target: '_blank', class: 'project-content-link project-link-to-code'  %>
     <% end %>
   </div>
 </div>

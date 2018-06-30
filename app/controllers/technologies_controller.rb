@@ -1,4 +1,7 @@
 class TechnologiesController < ApplicationController
+  include AuthenticationRedirectConcern
+
+  before_action :authenticate_redirection
   before_action :set_technology, only: [:show, :edit, :update, :destroy]
 
   # GET /technologies
