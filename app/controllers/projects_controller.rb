@@ -1,7 +1,6 @@
 class ProjectsController < ApplicationController
   include AuthenticationRedirectConcern
 
-
   before_action :authenticate_redirection, except: [:index]
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 

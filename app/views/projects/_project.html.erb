@@ -32,5 +32,9 @@
     <% if project.link_to_code != nil && project.link_to_code != '' %>
       <%= link_to "Code on Github", project.link_to_code, target: '_blank', class: 'project-content-link project-link-to-code'  %>
     <% end %>
+    <% if admin_signed_in? %>
+      <%= link_to "Edit Project", edit_project_path(project), class: 'project-content-link'  %>
+    <% end %>
+
   </div>
 </div>

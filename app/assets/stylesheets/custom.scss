@@ -20,9 +20,9 @@ body{
 }
 .header-container
 {
-  position: fixed;
+  /*position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 2;*/
   width: 100%;
   padding-top: 10px;
 }
@@ -30,9 +30,8 @@ body{
 {
   align: center;
 }
-.content-container{
-  margin-top:80px;
-}
+
+
 
 
 /* Navigation */
@@ -75,7 +74,6 @@ body{
 /* Home Page - About Page */
 .intro-text-container, .keys-container, .about-text-container{
   float: left;
-  /*width: 60%;*/
   padding-right: 5%;
   font-family: monospace;
 }
@@ -101,97 +99,15 @@ body{
   }
 }
 
-.wordcloud-container{
-  display: none;
-  width: 40%;
-  float: left;
-  .wordcloud{
-    width: 100%;
-    height: 350px;
-    position: relative;
-    font-family: Simplifica;
-    font-size: 1.2em;
-  }
-}
 .contact-block{
     font-family: Simplifica;
     font-size: 2.5em;
     line-height: 1.5;
 }
 
-/* Technologies page */
-/* ChartDiv */
-#chartdiv {
-  width: 70%;
-  height: 250px;
-  margin: auto;
-  text{
-    font-family: Simplifica;
-    fill: white;
-    font-weight: bold;
-    font-size: 1.5em;
-  }
-} 
 
-a[title^="JavaScript charts"]{
-  display:none !important;
-}
-
-.technology-listing{
-  width: 70%;
-  padding-left: 5%;
-  padding-right: 5%;
-  margin: auto;
-  text-align: center;
-  .technology-container{
-    border-bottom: 1px solid $lightgrey;
-    padding: 30px;
-    background: rgba(0,0,0,0.9);
-    margin-top: 30px;
-    .tech-title{
-        font-family: Simplifica;
-        font-size: 2.5em;
-        line-height: 2;
-        font-weight: bold;
-    }
-    .tech-description{
-      font-family: monospace;
-    }
-    .tech-projects{
-      .btn-project{
-        margin-top: 15px;
-        color: #fff;
-        background-color: $strongblue;
-        border-color: #285e8e;
-        font-family: monospace;
-        &:hover{
-          background-color: #3071a9;
-        }
-      }
-    }
-  }
-}
 
 /* Projects Page */
-.technology-filters
-{
-  padding: 15px;
-  font-family: monospace;
-  width: 70%;
-  margin:auto;
-  text-align:center;
-  .technology-filter{
-    padding: 15px;
-    a{
-      color: white;
-      &:hover, &:visited{
-        text-decoration: none;
-        color:white;
-        background: transparent;
-      }
-    }
-  }
-}
 .projects-pane{
   position:fixed;
   float:left;
@@ -232,6 +148,7 @@ a[title^="JavaScript charts"]{
     }
   }
 }
+
 .projects-list{
   overflow: hidden;
   margin-left: 30%;
@@ -248,10 +165,6 @@ a[title^="JavaScript charts"]{
       height: 100%
     }
 
-  }
-
-  .tps-section{
-    //height: 430px !important;
   }
   
   .project-content-container{
@@ -341,5 +254,17 @@ a[title^="JavaScript charts"]{
   padding-bottom: 30px;
   font-family: monospace;
   text-align: right;
+}
+
+/* Admin pages */
+
+input {
+  color: black;
+}
+
+.admin-links-panel {
+  width: 40%;
+  float: right;
+  padding: 20px;
 }
 

@@ -1,5 +1,4 @@
 class RegistrationsController < Devise::RegistrationsController
-
   before_action :one_admin_registered?, only: [:new, :create]
   
   protected
@@ -13,5 +12,4 @@ class RegistrationsController < Devise::RegistrationsController
       end
     end  
   end
-
 end
