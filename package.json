@@ -1,5 +1,7 @@
 {
   "name": "personal_website",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "javascript-time-ago": "^1.0.31"
+  }
 }

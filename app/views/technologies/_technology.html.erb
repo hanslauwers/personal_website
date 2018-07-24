@@ -1,6 +1,7 @@
 <p class="tech-title">
-  Title: <%= technology.title %><br/>
-  ID: <%=technology.id %><br/>
-  Order: <%= technology.order %>
+  <%= technology.title %> - <%= technology.order %> - 
+  <% if admin_signed_in? %>
+    <%= link_to 'Edit technology', edit_technology_path(technology) %>
+  <% end %>
 </p>
 

@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require rails-ujs
+//= require lodash
 //= require_tree .

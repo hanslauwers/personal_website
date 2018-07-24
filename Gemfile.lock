@@ -93,6 +93,8 @@ GEM
       less (~> 2.6.0)
       sprockets (> 2, < 4)
       tilt
+    lodash-rails (4.17.10)
+      railties (>= 3.1)
     loofah (2.1.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -209,6 +211,7 @@ DEPENDENCIES
   font-awesome-rails
   jbuilder (~> 2.5)
   jquery-rails
+  lodash-rails (~> 4.17, >= 4.17.10)
   pg
   puma (~> 3.7)
   rails (~> 5.1.4)

@@ -10,11 +10,6 @@ class TechnologiesController < ApplicationController
     @technologies = Technology.all
   end
 
-  # GET /technologies/1
-  # GET /technologies/1.json
-  def show
-  end
-
   # GET /technologies/new
   def new
     @technology = Technology.new

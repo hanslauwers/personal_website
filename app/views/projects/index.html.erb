@@ -5,7 +5,6 @@
     <% end %>
   </ul>
 </div>
-
 <div class="projects-list">
   <h2 align="center">Projects</h2>
   <% @projects.order(order: :desc).each do |project| %>
@@ -21,10 +20,3 @@
   <img class="modal-content" id="modal-for-project">
   <div id="caption"></div>
 </div>
-
-<script>
-$(".nav-demo li").spotter({
-  menuListClass: "active",
-  contentList: ".projects-list .invisible-anchor"
-});
-</script>

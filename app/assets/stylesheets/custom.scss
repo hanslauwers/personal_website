@@ -74,13 +74,38 @@ body{
 /* Home Page - About Page */
 .intro-text-container, .keys-container, .about-text-container{
   float: left;
-  padding-right: 5%;
   font-family: monospace;
-}
-.keys-info{
-  line-height: 40px;
-  font-size: 20px;
-  margin-bottom: 40px;
+
+  .keys-info{
+    line-height: 40px;
+    font-size: 17px; /*20px;*/
+    margin-bottom: 40px;
+  }
+
+  .commits {
+    .panel{
+      color:black;
+      a{
+        color:black;
+        font-weight: bold;
+      }
+      .commit-message{
+        font-style: italic;
+      }
+      .commit-date {
+        font-size: 12px;
+        margin-top: 5px;
+      }
+
+      .commit-item{
+        padding: 10px 0px;
+        border-bottom: 1px solid gray;
+      }
+      .commit-item:last-child {
+        border-bottom: 0px;
+      }
+    }
+  }
 }
 .check-out-projects{
   border: 2px solid $strongblue;

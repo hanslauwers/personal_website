@@ -4,13 +4,8 @@ class ProjectsController < ApplicationController
   before_action :authenticate_redirection, except: [:index]
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
-  layout "pages"
-
   def index
     @projects = Project.all
-  end
-
-  def show
   end
 
   def edit

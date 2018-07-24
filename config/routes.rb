@@ -7,6 +7,6 @@ Rails.application.routes.draw do
 
   get 'about', to: 'about#index'
   
-  resources :technologies
-  resources :projects
+  resources :technologies, except: [:show]
+  resources :projects, except: [:show]
 end
