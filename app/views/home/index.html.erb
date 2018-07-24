@@ -1,7 +1,7 @@
 <div class="intro-text-container keys-container">
-  <div class="row">
-    <div class="col-lg-7">
-      <div class="keys-info">
+  <div class="row row-separator">
+    <div class="col-lg-6 col-separator">
+      <div class="keys-info quadrant">
         <div>
           Full-stack software engineer
         </div>
@@ -14,25 +14,29 @@
         <div>
           Always looking to learn and improve!
         </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="quadrant">
         <div class="skills">
           Ruby On Rails, React, Redux, SharePoint, jQuery, Bootstrap, SCSS, SQL, Heroku, REST, PostgreSQL, MongoDB, Webpack, Yarn, RSpec, Jest, Enzyme, AngularJS, Sublime Text, Cloud9, Visual Studio, Git,...
         </div>
       </div>
-      <div class="check-out-projects">
-        <%=link_to "Check out some projects I've worked on!", projects_path %>
-      </div>
-    </div>
-    <div class="col-lg-5">
-      <h3>Latest Git Commits</h3>
-      <div class="commits">
-      </div>
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-12">
-    
+    <div class="col-lg-6 col-separator">
+      <div class="quadrant">
+        <div class="check-out-projects">
+          <%=link_to "Check out some projects I've worked on!", projects_path %>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="commits quadrant">
+      </div>
+    </div>
   </div>
-</div>
 </div>
 
 

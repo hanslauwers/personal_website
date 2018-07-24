@@ -72,14 +72,45 @@ body{
 }
 
 /* Home Page - About Page */
+.row-separator {
+  border-bottom: 2px solid;
+}
+.col-separator {
+  border-right: 2px solid;
+}
+.quadrant {
+  padding: 20px;
+  min-height: 250px;
+  text-align: center;
+}
+.skills, .check-out-projects{
+    font-variant: all-small-caps;
+    font-size: 20px;
+    background: white;
+    opacity: 0.9;
+    color: black;
+    padding: 10px;
+    
+}
+.check-out-projects{
+    font-size: 30px;
+    a {
+      color:black;
+      &:hover, &:visited{
+        text-decoration: none;
+        background: transparent;
+      }
+    }
+}
+
 .intro-text-container, .keys-container, .about-text-container{
   float: left;
   font-family: monospace;
 
   .keys-info{
     line-height: 40px;
-    font-size: 17px; /*20px;*/
-    margin-bottom: 40px;
+    font-size: 24px;
+    font-variant: small-caps;
   }
 
   .commits {
@@ -107,22 +138,7 @@ body{
     }
   }
 }
-.check-out-projects{
-  border: 2px solid $strongblue;
-  padding: 10px;
-  
-  a{
-    color: $strongblue;
-    font-size: 25px;
-    
-    &:hover, &:visited{
-      color: $strongblue;
-      font-size: 25px;
-      text-decoration: none;
-      background: transparent;
-    }
-  }
-}
+
 
 .contact-block{
     font-family: Simplifica;
