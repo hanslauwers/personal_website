@@ -13,76 +13,74 @@
 
   <div class="row">
     <div class="col-md-12 form-container">
-      <%= form_for(@project, :html => {class: "form-horizontal", role: "form"}) do |f| %>
-        <div class="form-group row">
-          <div class="col-md-2 control-label form-label-container">
-            <%= f.label :title %>
-          </div>
-          <div class="col-md-8 form-input-container">
-            <%= f.text_field :title, class: "form-control", placeholder: "Title of project", autofocus: true %>
+      <div class="form-group row">
+        <div class="col-md-2 control-label form-label-container">
+          <%= form.label :title %>
+        </div>
+        <div class="col-md-8 form-input-container">
+          <%= form.text_field :title, class: "form-control", placeholder: "Title of project", autofocus: true %>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-2 control-label form-label-container">
+          <%= form.label :description %>
+        </div>
+        <div class="col-md-8 form-input-container">
+          <%= form.text_area :description, rows: 10, class: "form-control", placeholder: "Description of project" %>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-2 control-label form-label-container">
+          <%= form.label :main_image %>
+        </div>
+        <div class="col-md-8 form-input-container">
+          <%= form.file_field :main_image %>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-2 control-label form-label-container">
+          <%= form.label :link_to_code %>
+        </div>
+        <div class="col-md-8 form-input-container">
+          <%= form.text_field :link_to_code, class: "form-control", placeholder: "Link to code" %>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-2 control-label form-label-container">
+          <%= form.label :link_to_site %>
+        </div>
+        <div class="col-md-8 form-input-container">
+          <%= form.text_field :link_to_site, class: "form-control", placeholder: "Link to site" %>
+        </div>
+      </div>
+       <div class="form-group row">
+        <div class="col-md-2 control-label form-label-container">
+          <%= form.label :period %>
+        </div>
+        <div class="col-md-8 form-input-container">
+          <%= form.text_field :period, class: "form-control", placeholder: "Period" %>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-2 control-label form-label-container">
+          <%= form.label :order %>
+        </div>
+        <div class="col-md-8 form-input-container">
+          <%= form.text_field :order, class: "form-control", placeholder: "Order" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <%= form.collection_check_boxes :technology_ids, Technology.all, :id, :title do |cb|  %>
+              <% cb.label(class: "checkbox-inline input_checkbox") { cb.check_box(class: "checkbox") + cb.text } %>
+            <% end %>
           </div>
         </div>
-        <div class="form-group row">
-          <div class="col-md-2 control-label form-label-container">
-            <%= f.label :description %>
-          </div>
-          <div class="col-md-8 form-input-container">
-            <%= f.text_area :description, rows: 10, class: "form-control", placeholder: "Description of project" %>
-          </div>
-        </div>
-        <div class="form-group row">
-          <div class="col-md-2 control-label form-label-container">
-            <%= f.label :image_url %>
-          </div>
-          <div class="col-md-8 form-input-container">
-            <%= f.text_field :image_url, class: "form-control", placeholder: "Image url" %>
-          </div>
-        </div>
-        <div class="form-group row">
-          <div class="col-md-2 control-label form-label-container">
-            <%= f.label :link_to_code %>
-          </div>
-          <div class="col-md-8 form-input-container">
-            <%= f.text_field :link_to_code, class: "form-control", placeholder: "Link to code" %>
-          </div>
-        </div>
-        <div class="form-group row">
-          <div class="col-md-2 control-label form-label-container">
-            <%= f.label :link_to_site %>
-          </div>
-          <div class="col-md-8 form-input-container">
-            <%= f.text_field :link_to_site, class: "form-control", placeholder: "Link to site" %>
-          </div>
-        </div>
-         <div class="form-group row">
-          <div class="col-md-2 control-label form-label-container">
-            <%= f.label :period %>
-          </div>
-          <div class="col-md-8 form-input-container">
-            <%= f.text_field :period, class: "form-control", placeholder: "Period" %>
-          </div>
-        </div>
-        <div class="form-group row">
-          <div class="col-md-2 control-label form-label-container">
-            <%= f.label :order %>
-          </div>
-          <div class="col-md-8 form-input-container">
-            <%= f.text_field :order, class: "form-control", placeholder: "Order" %>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="row">
-            <div class="col-md-8 offset-md-2">
-              <%= f.collection_check_boxes :technology_ids, Technology.all, :id, :title do |cb|  %>
-                <% cb.label(class: "checkbox-inline input_checkbox") { cb.check_box(class: "checkbox") + cb.text } %>
-              <% end %>
-            </div>
-          </div>
-        </div>
-        <div class="actions">
-          <%= form.submit %>
-        </div>
-      <% end %>
+      </div>
+      <div class="actions">
+        <%= form.submit %>
+      </div>
     </div>
   </div>
 <% end %>

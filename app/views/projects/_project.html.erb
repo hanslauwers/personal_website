@@ -1,8 +1,12 @@
 <div class="project-content-container">
-  <% if project.image_url != nil && project.image_url != '' %>
+  <% if project.main_image %>
     <div class="project-image-container">
-      <img id="project-image-<%= project.id %>" src="assets/<%= project.image_url %>" alt="<%= project.title %>"
-            class= "project-image" onclick="javascript:showModal('project-image-<%= project.id %>');" />
+      <%= image_tag project.main_image, 
+            class: "main-image",
+            id: "project-image-#{project.id}",
+            alt: "#{project.title}",
+            onclick: "javascript:showModal('project-image-#{project.id}');" %>
+
     </div>
   <% end %>
   <div class="project-title-description">

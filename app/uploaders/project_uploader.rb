@@ -1,5 +1,4 @@
 class ProjectUploader < CarrierWave::Uploader::Base
-  
   storage :aws
   
   def store_dir
@@ -10,4 +9,7 @@ class ProjectUploader < CarrierWave::Uploader::Base
     %w(jpg jpeg gif png)
   end
 
+  def cache_dir
+    "uploads/#{Rails.env}/#{model.class.to_s.underscore}-#{mounted_as}/#{model.id}"
+  end
 end

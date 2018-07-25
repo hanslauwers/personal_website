@@ -6,6 +6,8 @@ CarrierWave.configure do |config|
   # The maximum period for authenticated_urls is only 7 days.
   config.aws_authenticated_url_expiration = 60 * 60 * 24 * 7
 
+  config.delete_tmp_file_after_storage = false
+
   # Set custom options such as cache control to leverage browser caching
   config.aws_attributes = {
     expires: 1.week.from_now.httpdate,

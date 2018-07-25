@@ -11,6 +11,6 @@ function showModal(id){
 }
 
 function closeModal(){
-var modal = document.getElementById('myModal');
+  var modal = document.getElementById('myModal');
   modal.style.display = "none";
 }
