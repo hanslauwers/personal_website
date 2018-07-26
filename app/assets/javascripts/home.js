@@ -18,7 +18,7 @@ function transformEvents(events){
   index = 0;
   _.forEach(output,
     function (el) {
-      _.forEach(el.commits,
+      _.forEachRight(el.commits,
         function(commit) {
           index += 1;
           if(index <= 5) {
