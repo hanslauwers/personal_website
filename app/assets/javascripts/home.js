@@ -2,7 +2,7 @@ user = "hanslauwers";
 url = "https://api.github.com/users/hanslauwers/events";
 
 function transformEvents(events){
-  commits = _.filter(events, e => e.type == "PushEvent");
+  commits = events
   all_output = _.map(commits, (c) => 
     ({"created_at" : c.created_at,
       "author" : c.actor.display_login, 
